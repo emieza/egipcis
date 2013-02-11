@@ -8,9 +8,9 @@
     <h1>Projecte ${project}</h1>
     <big>Estas a <b>${page}</b></big>
     <ul>
-        <li><a href="/pagina1">pagina1</a></li>
-        <li><a href="/pagina2">pagina2</a></li>
-        <li><a href="/admin">admin page</a></li>
+        <li><a href="/keops">Keops</a></li>
+        <li><a href="/temple">Temple</a></li>
+        <li><a href="/cairo">Ciutat del Cairo</a></li>
    </ul>
 
    ${next.body()}
