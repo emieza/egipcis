@@ -7,6 +7,9 @@
       td {
           vertical-align: top;
       }
+      #usuari-box {
+          background-color: cyan;
+      }
   </style>
 </head>
 <body>
@@ -17,7 +20,7 @@
     <center><h1>Projecte ${project}</h1></center>
     <big>Estas a <b>${page}</b></big>
     % if logged_in:
-        <p>Usuari: <b>${logged_in}</b> | [<a href="/logout">Sortir</a>]</p>
+        <p id="usuari-box">Usuari: <b>${logged_in}</b> | [<a href="/logout">Sortir</a>]</p>
     % endif
     <ul>
         <li><a href="/keops">Keops</a></li>
