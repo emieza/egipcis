@@ -3,17 +3,36 @@
 <head>
   <title>Pyramid ${project}</title>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <style>
+      td {
+          vertical-align: top;
+      }
+  </style>
 </head>
 <body>
-    <h1>Projecte ${project}</h1>
+    
+<table border="0">
+<tr><td>
+    <img width="220" height="50" alt="pyramid" src="/static/pyramid-small.png" />
+    <center><h1>Projecte ${project}</h1></center>
     <big>Estas a <b>${page}</b></big>
+    % if logged_in:
+        <p>Usuari: <b>${logged_in}</b> | [<a href="/logout">Sortir</a>]</p>
+    % endif
     <ul>
         <li><a href="/keops">Keops</a></li>
         <li><a href="/temple">Temple</a></li>
         <li><a href="/cairo">Ciutat del Cairo</a></li>
+        <li><a href="/">Home</a></li>
    </ul>
-
+   <br/>
+</td>
+<td>
+<div id="imatge">
    ${next.body()}
-   
+</div>
+</td></tr>
+</table>
+
 </body>
 </html>

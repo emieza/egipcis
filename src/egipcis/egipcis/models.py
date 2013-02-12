@@ -6,11 +6,12 @@ from pyramid.security import (
     )
     
     
-class Egipcis():
-    __name__ = None
-    __parent__ = None
+class RootFactory(object):
     __acl__ = [ (Allow, Everyone, 'view'),
                 (Allow, 'group:sacerdots', 'sacerdots'),
                 (Allow, 'group:farao', 'master')
             ]
+    def __init__(self, request):
+        pass
+        
 
