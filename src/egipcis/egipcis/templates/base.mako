@@ -16,17 +16,17 @@
     
 <table border="0">
 <tr><td>
-    <img width="220" height="50" alt="pyramid" src="/static/pyramid-small.png" />
+    <img width="220" height="50" alt="pyramid" src="${request.route_url('home')}/static/pyramid-small.png" />
     <center><h1>Projecte ${project}</h1></center>
     <big>Estas a <b>${page}</b></big>
     % if logged_in:
-        <p id="usuari-box">Usuari: <b>${logged_in}</b> | [<a href="/logout">Sortir</a>]</p>
+        <p id="usuari-box">Usuari: <b>${logged_in}</b> | [<a href="${request.route_url('home')}/logout">Sortir</a>]</p>
     % endif
     <ul>
-        <li><a href="/keops">Keops</a></li>
-        <li><a href="/temple">Temple</a></li>
-        <li><a href="/cairo">Ciutat del Cairo</a></li>
-        <li><a href="/">Home</a></li>
+        <li><a href="${request.route_url('keops')}">Keops</a></li>
+        <li><a href="${request.route_url('temple')}">Temple</a></li>
+        <li><a href="${request.route_url('cairo')}">Ciutat del Cairo</a></li>
+        <li><a href="${request.route_url('home')}">Home</a></li>
    </ul>
    <br/>
 </td>
