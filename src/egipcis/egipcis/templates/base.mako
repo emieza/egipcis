@@ -16,11 +16,11 @@
     
 <table border="0">
 <tr><td>
-    <img width="220" height="50" alt="pyramid" src="${request.route_url('home')}/static/pyramid-small.png" />
+    <img width="220" height="50" alt="pyramid" src="/static/pyramid.png" />
     <center><h1>Projecte ${project}</h1></center>
     <big>Estas a <b>${page}</b></big>
     % if logged_in:
-        <p id="usuari-box">Usuari: <b>${logged_in}</b> | [<a href="${request.route_url('home')}/logout">Sortir</a>]</p>
+        <p id="usuari-box">Usuari: <b>${logged_in}</b> | [<a href="${request.route_url('logout')}">Sortir</a>]</p>
     % endif
     <ul>
         <li><a href="${request.route_url('keops')}">Keops</a></li>
