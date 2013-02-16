@@ -26,8 +26,8 @@ def main(global_config, **settings):
     config.set_authentication_policy(authn_policy)
     config.set_authorization_policy(authz_policy)
     # static view setup
-    config.add_static_view('static', os.path.join(here, 'static'))
-    #config.add_static_view('static', 'static', cache_max_age=3600)
+    #config.add_static_view('static', os.path.join(here, 'static'))
+    config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_route('home', '/')
     config.add_route('keops', '/keops')
     config.add_route('temple', '/temple')

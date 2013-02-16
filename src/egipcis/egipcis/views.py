@@ -30,9 +30,9 @@ def admin_view(request):
 
 
 # aquest decorator és per establir la ruta per /login
-@view_config( route_name='login', renderer='templates/login.pt')
+@view_config( route_name='login', renderer='login.mako')
 # aquest altre ens redirigirà aquí quan algú intenti entrar en una web que no té permís
-@forbidden_view_config(renderer='templates/login.pt')
+@forbidden_view_config(renderer='login.mako')
 def login(request):
     login_url = request.route_url('login')
     # detectem des de quina URL ve el visitant

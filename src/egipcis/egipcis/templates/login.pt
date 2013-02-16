@@ -23,6 +23,7 @@
     <div id="top-small">
       <div class="top-small align-center">
         <div>
+          <img src="${request.static_url('egipcis:static/pyramid.png')}" width="750" height="169" alt="pyramid"/>
           <img width="220" height="50" alt="pyramid"
         src="/static/pyramid-small.png" />
         </div>

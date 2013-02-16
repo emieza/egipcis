@@ -8,13 +8,13 @@
   <meta name="keywords" content="python web application" />
   <meta name="description" content="pyramid web application" />
   <link rel="shortcut icon"
-        href="/static/favicon.ico" />
+        href="${request.static_url('egipcis:static/favicon.ico')}" />
   <link rel="stylesheet"
-        href="/static/pylons.css"
+        href="${request.static_url('egipcis:static/pylons.css')}"
         type="text/css" media="screen" charset="utf-8" />
   <!--[if lte IE 6]>
   <link rel="stylesheet"
-        href="/static/ie6.css"
+        href="${request.static_url('egipcis:static/ie6.css')}"
         type="text/css" media="screen" charset="utf-8" />
   <![endif]-->
 </head>
@@ -24,15 +24,17 @@
       <div class="top-small align-center">
         <div>
           <img width="220" height="50" alt="pyramid"
-        src="/static/pyramid-small.png" />
+        src="${request.static_url('egipcis:static/pyramid-small.png')}" />
         </div>
       </div>
     </div>
     <div id="middle">
       <div class="middle align-right">
         <div id="left" class="app-welcome align-left">
-          <b>Login</b><br/>
-          <span tal:replace="message"/>
+          <b>Login</b> | <a href="${request.route_url('home')}">Anar a la Home Page</a><br/>
+          % if message:
+            ${message}
+          % endif
         </div>
         <div id="right" class="app-welcome align-right"></div>
       </div>
@@ -50,8 +52,7 @@
     </div>
   </div>
   <div id="footer">
-    <div class="footer"
-         >&copy; Copyright 2008-2011, Agendaless Consulting.</div>
+    <div class="footer">Copyleft Institut Lacetània 2013.</div>
   </div>
 </body>
 </html>

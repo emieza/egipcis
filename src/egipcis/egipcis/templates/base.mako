@@ -16,7 +16,7 @@
     
 <table border="0">
 <tr><td>
-    <img width="220" height="50" alt="pyramid" src="/static/pyramid.png" />
+    <img width="220" height="50" alt="pyramid" src="${request.static_url('egipcis:static/pyramid.png')}" />
     <center><h1>Projecte ${project}</h1></center>
     <big>Estas a <b>${page}</b></big>
     % if logged_in:
